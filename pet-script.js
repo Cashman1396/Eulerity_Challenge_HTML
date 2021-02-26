@@ -19,4 +19,7 @@ const getImage = (data) => {
     rootDiv.classList.add("img-container")
 
     const img = doucment.createElement("img")
+    img.classList.add("img-pets")
+    img.crossOrigin = "Anonymous"
+    img.src = data.url
 }
