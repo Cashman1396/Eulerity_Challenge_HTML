@@ -51,9 +51,24 @@ const getImage = (data) => {
         if (imgGallery.includes(data)) {
             const choice = imgGallery.findIndex(e => e === data)
             imgGallery,splice(choice, 1)
-            imgGallery.classList.
+            imgGallery.classList.remove("selected-img")
+        }
+        else {
+            imgGallery.push(data)
+            img.classList.add('"selected-img')            
+        }
+
+
+        if (imgGallery.length === 0) {
+            document.querySelector("download-page").removeChild(download)
+        } 
+        else 
+        {
+            document.querySelector("download-page").appendChild(download) 
         }
     })
+
+    
 
 
 
