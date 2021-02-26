@@ -68,7 +68,11 @@ const getImage = (data) => {
         }
     })
 
-    
+    text.appendChild(petTitle)
+    text.appendChild(petDate)
+    text.appendChild(description)
+
+
 
 
 
