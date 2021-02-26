@@ -4,7 +4,7 @@ const imgGallery = new Array()
 
 //creates elements for downloading the images in the gallery
 const header = document.createElement("div")
-header.classList.add("download")
+header.classList.add("header")
 
 const downloadImgs = document.createElement("button")
 downloadImgs.innerHTML = "Download images"
@@ -18,28 +18,28 @@ const getImage = (data) => {
     const rootDiv = document.createElement("div")
     rootDiv.classList.add("img-container")
 
-    const img = doucument.createElement("img")
+    const img = document.createElement("img")
     img.classList.add("img-pets")
     img.crossOrigin = "Anonymous"
     img.src = data.url
 
     //text information for the pets from the server
-    const text = document.createElement("div")
-    text.classList.add("text")
+    const textDiv = document.createElement("div")
+    textDiv.classList.add("text-Div")
 
-    const petTitle = document.createElement("h2")
-    petTitle.innerHTML = data.title 
-    petTitle.classList.add("title-name")
+    const petsTitle = document.createElement("h2")
+    petsTitle.innerHTML = data.title 
+    petsTitle.classList.add("title-name")
 
-    const petDate = doucment.createElement("p")
+    const petsDate = document.createElement("p")
     const date = data.created.split(" ")
-    petDate.innerHTML = `This pet joined on ${date[0]}, ${date[1]}, ${date[2]}, ${date[date[date.length - 1]]}`
-    petDate.classList.add("pet-date")
+    petsDate.innerHTML = `This pet joined on ${date[0]}, ${date[1]}, ${date[2]}, ${date[date[date.length - 1]]}`
+    petsDate.classList.add("pet-date")
 
     //description of the pet
-    const description  = document.createElement("p")
-    description.innerHTML = data.description("description")
-    description.classList.add("description")
+    const petsDescription = document.createElement("p")
+    petsDescription.innerHTML = data.description
+    petsDescription.classList.add("description")
 
 
     //download button for images and selecting multiple images
@@ -60,17 +60,26 @@ const getImage = (data) => {
 
 
         if (imgGallery.length === 0) {
-            document.querySelector("download").removeChild(download)
+            document.querySelector("download").removeChild(header)
         } 
         else 
         {
-            document.querySelector("download").appendChild(download) 
+            document.querySelector("download").appendChild(header) 
         }
     })
 
-    text.appendChild(petTitle)
-    text.appendChild(petDate)
-    text.appendChild(description)
+    textDiv.appendChild(petsTitle)
+    textDiv.appendChild(petsDate)
+    textDiv.appendChild(petsDescription)
+
+    const buttonDiv = document.createElement("div")
+    buttonDiv.classList.add("download-container")
+    buttonDiv.appendChild(downloadBtn)
+    textDiv.appendChild(buttonDiv)
+
+    rootDiv.appendChild(img)
+    rootDiv.appendChild(textDiv)
+    document.querySelector('#container').appendChild(rootDiv)
 
 }
 
@@ -105,11 +114,11 @@ const getPets = async () => {
         const response = await axios.get(URL)
         const arr = response.data
         arr.forEach((e) => {
-            createImage(e)
+            getImage(e)
         })
     } catch (error) {
         console.log(`${error}`)
     }
 }
 
-getPets
+getPets()
