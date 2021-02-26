@@ -37,6 +37,23 @@ const getImage = (data) => {
     petDate.classList.add("pet-date")
 
     //description of the pet
+    const description  = document.createElement("p")
+    description.innerHTML = data.description("description")
+    description.classList.add("description")
+
+
+    //download button for images and selecting multiple images
+    const downloadBtn = document.createElement("button")
+    downloadBtn.innerHTML = 'Select'
+    downloadBtn.classList.add("download-btn")
+
+    downloadBtn.addEventListener("click", () => {
+        if (imgGallery.includes(data)) {
+            const choice = imgGallery.findIndex(e => e === data)
+            imgGallery,splice(choice, 1)
+            imgGallery.classList.
+        }
+    })
 
 
 
