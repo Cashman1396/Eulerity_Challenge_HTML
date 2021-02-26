@@ -22,4 +22,22 @@ const getImage = (data) => {
     img.classList.add("img-pets")
     img.crossOrigin = "Anonymous"
     img.src = data.url
+
+    //text information for the pets from the server
+    const text = document.createElement("div")
+    text.classList.add("text")
+
+    const petTitle = document.createElement("h2")
+    petTitle.innerHTML = data.title 
+    petTitle.classList.add("title-name")
+
+    const petDate = doucment.createElement("p")
+    const date = data.created.split(" ")
+    petDate.innerHTML = `This pet joined on ${date[0]}, ${date[1]}, ${date[2]}, ${date[date[date.length - 1]]}}`
+    petDate.classList.add("pet-date")
+
+    //description of the pet
+
+
+
 }
