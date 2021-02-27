@@ -42,3 +42,14 @@ header {
 .download-container {
     text-align: center;
 }
+
+.download-btn {
+    width: 15%;
+    background-color: lightcyan;
+    border-radius: 5px;
+    color: skyblue;
+    padding: 10px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+}
