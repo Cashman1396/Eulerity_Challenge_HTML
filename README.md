@@ -1,4 +1,4 @@
-# Eulerity_Challenge_HTML
+# Eulerity Challenge HTML
 
 Hi I am Chris Ashman and Welcome to my Take Home Challenge for Eulerity. 
 I hope you enjoy it.
