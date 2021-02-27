@@ -50,8 +50,8 @@ const getImage = (data) => {
     downloadBtn.addEventListener("click", () => {
         if (imgGallery.includes(data)) {
             const choice = imgGallery.findIndex(e => e === data)
-            imgGallery,splice(choice, 1)
-            imgGallery.classList.remove("selected-img")
+            imgGallery.splice(choice, 1)
+            img.classList.remove("selected-img")
         }
         else {
             imgGallery.push(data)
@@ -60,11 +60,11 @@ const getImage = (data) => {
 
 
         if (imgGallery.length === 0) {
-            document.querySelector("download").removeChild(header)
+            document.querySelector("#header-page").removeChild(header)
         } 
         else 
         {
-            document.querySelector("download").appendChild(header) 
+            document.querySelector("#header-page").appendChild(header) 
         }
     })
 
@@ -103,7 +103,7 @@ function callDownload(str) {
 
 //eventListener for when you download all images
 downloadImgs.addEventListener("click", () => {
-    imgGallery,forEach(e => {
+    imgGallery.forEach(e => {
         callDownload(e)
     })
 })
