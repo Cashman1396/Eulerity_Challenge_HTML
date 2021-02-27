@@ -2,6 +2,10 @@ body{
     background-color:lightblue;
 }
 
+header {
+    text-align: center;
+}
+
 .title {
     text-align: center;
     color: lightcyan;
@@ -12,4 +16,29 @@ body{
     margin: 20px auto;
     display: flex;
     object-fit: contain;
+}
+
+.text-Div {
+    padding: 20px;
+
+}
+
+.title-name {
+    text-align: center;
+    margin: auto;
+    color: rgb(94, 83, 83);
+}
+
+.pet-date {
+    text-align: center;
+    color: rgb(94, 83, 83);
+}
+
+.description {
+    text-align: center;
+    color: rgb(94, 83, 83);
+}
+
+.download-btn {
+    text-align: center;
 }
