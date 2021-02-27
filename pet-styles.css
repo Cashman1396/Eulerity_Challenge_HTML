@@ -6,6 +6,19 @@ header {
     text-align: center;
 }
 
+footer {
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: lightskyblue;
+    height: 75px;
+}
+
 .title {
     text-align: center;
     color: lightcyan;
@@ -18,7 +31,7 @@ header {
     object-fit: contain;
 }
 
-.text-Div {
+.text {
     padding: 20px;
 
 }
@@ -47,9 +60,30 @@ header {
     width: 15%;
     background-color: lightcyan;
     border-radius: 5px;
-    color: skyblue;
+    color: rgb(59, 106, 136);
     padding: 10px 25px;
     text-align: center;
     display: inline-block;
     font-size: 12px;
+    
+}
+
+.download-btn:hover {
+    background-color: rgb(189, 179, 255);
+}
+
+.select-all-button {
+    color: rgb(59, 106, 136);
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 12px;
+    width: 15%;
+    text-align: center;
+    background-color: lightcyan;
+    margin-top: 20px;
+}
+
+.select-all-button:hover {
+    background-color: rgb(189, 179, 255);
 }

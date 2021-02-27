@@ -25,7 +25,7 @@ const getImage = (data) => {
 
     //text information for the pets from the server
     const textDiv = document.createElement("div")
-    textDiv.classList.add("text-Div")
+    textDiv.classList.add("text")
 
     const petsTitle = document.createElement("h2")
     petsTitle.innerHTML = data.title 
